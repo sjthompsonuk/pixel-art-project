@@ -33,6 +33,7 @@ submit.addEventListener('click', function(evt) {
 })
 
 //Event listener for mousedown within table on cells (background color change)
+
 table.addEventListener('mousedown', function(evt) {
   evt.preventDefault();
   //update color

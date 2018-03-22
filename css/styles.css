@@ -16,10 +16,24 @@ h2:first-of-type {
     margin-top: 0.5em;
 }
 
+body{
+  color: #fff;
+  background-image: url("../img/marble.jpg");
+}
+
+.submit-button,
+.inputHeight,
+.inputWidth {
+  color: #fff;
+  background-color: #000;
+  border-color: #fff;
+}
+
 table,
 tr,
 td {
-    border: 1px solid black;
+    border: 1px solid #000;
+    background-color: #fff;
 }
 
 table {

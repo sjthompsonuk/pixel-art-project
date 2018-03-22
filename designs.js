@@ -1,16 +1,29 @@
 //Define variables required
 const submit = document.querySelector('.submit-button');
-const height = document.querySelector('.inputHeight').value;
-const width = document.querySelector('.inputWidth').value;
+let height = document.querySelector('.inputHeight').value;
+let width = document.querySelector('.inputWidth').value;
 let color = document.querySelector('.colorPicker').value;
 const table = document.querySelector('.pixelCanvas');
 
 // When size is submitted by the user, call makeGrid()
 
 function makeGrid() {
-
-// Your code goes here!
-
+  //Update variables
+  height = document.querySelector('.inputHeight').value;
+  width = document.querySelector('.inputWidth').value;
+  //Clear any existing table's children
+  while (table.firstChild) {
+    table.removeChild(table.firstChild);
+  }
+  //Create table with loop
+  for (let i = 0; i < height; i++) {
+    const newRow = document.createElement('tr');
+    for (let i = 0; i < width; i++) {
+      const newCell = document.createElement('td');
+      newRow.appendChild(newCell);
+    }
+    table.appendChild(newRow);
+  }
 }
 
 //Event listener for submit - makeGrid()

@@ -27,7 +27,10 @@ function makeGrid() {
 }
 
 //Event listener for submit - makeGrid()
-
+submit.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  makeGrid();
+})
 //Event listener for mousedown within table on cells (background color change)
 
 //Event listener for doubleclick to reset cell to white

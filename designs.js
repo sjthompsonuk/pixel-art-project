@@ -31,6 +31,27 @@ submit.addEventListener('click', function(evt) {
   evt.preventDefault();
   makeGrid();
 })
+
 //Event listener for mousedown within table on cells (background color change)
+table.addEventListener('mousedown', function(evt) {
+  evt.preventDefault();
+  //update color
+  color = document.querySelector('.colorPicker').value;
+  //verify target is a cell
+  if (evt.target.nodeName == "TD") {
+    //change background color attribute
+    evt.target.style.backgroundColor = color;
+  }
+})
 
 //Event listener for doubleclick to reset cell to white
+table.addEventListener('dblclick', function(evt) {
+  evt.preventDefault();
+  //update color
+  color = document.querySelector('.colorPicker').value;
+  //verify target is a cell
+  if (evt.target.nodeName == "TD") {
+    //change background color attribute
+    evt.target.style.backgroundColor = '#fff';
+  }
+})
